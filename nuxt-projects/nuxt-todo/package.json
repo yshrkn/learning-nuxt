@@ -1,0 +1,20 @@
+{
+  "name": "nuxt-todo",
+  "version": "1.0.0",
+  "description": "My ace Nuxt.js project",
+  "author": "Ken Yoshihara",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/dotenv": "^1.4.1",
+    "firebase": "^7.15.0",
+    "nuxt": "^2.0.0",
+    "vuexfire": "^3.2.2"
+  },
+  "devDependencies": {}
+}
