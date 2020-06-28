@@ -1,3 +1,4 @@
+import webpack from 'webpack'
 
 export default {
   mode: 'spa',
@@ -48,6 +49,11 @@ export default {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
-    }
+    },
+    plugins: [
+      new webpack.ProvidePlugin({
+        '_': 'lodash'
+      })
+    ]
   }
 }
