@@ -1,0 +1,19 @@
+.button {
+  padding: 10px 20px;
+  font-size: 15px;
+  border-radius: 5px;
+  transition-property: background-color, color;
+  transition-duration: .75s;
+  transition-timing-function: ease-out;
+
+  &:hover {
+    color: red;
+    background-color: #fff;
+  }
+}
+
+.red {
+  background: red;
+  color: #fff;
+  cursor: pointer;
+}
