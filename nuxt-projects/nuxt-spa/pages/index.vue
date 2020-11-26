@@ -1,62 +1,43 @@
 <template>
   <div class="container">
-    <div>
-      <h1>nuxt-spa</h1>
-      <div class="links">
-        <nuxt-link to="about">About</nuxt-link>
-      </div>
-      <Button label='Hello'></Button>
-    </div>
+    <!-- <Button to="/about">nuxt-linkのボタン</Button>
+    <nuxt-link to="/about">nuxt-link</nuxt-link>
+    <Button>ただのボタン</Button> -->
+  
+    <ProductList :products="products"></ProductList>
   </div>
 </template>
 
 <script>
-import Button from '../components/Button';
+import Button from '../components/Button/Button.vue';
+import ProductList from '../components/ProductList/ProductList.vue';
 
 export default {
   components: {
-    Button
-  }
+    Button,
+    ProductList
+  },
+  data() {
+    return {
+      products: [
+        { id: 1, name: "商品A" },
+        { id: 2, name: "商品B" },
+        { id: 3, name: "商品C" },
+      ]
+    }
+  },
+  // async asyncData(context) {
+  //   setTimeout(() => {
+
+  //     return {
+  //       products: [
+  //         { id: 1, name: "商品A" },
+  //         { id: 2, name: "商品B" },
+  //         { id: 3, name: "商品C" },
+  //       ]
+  //     }
+
+  //   }, 1000);
+  // },
 }
 </script>
-
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
