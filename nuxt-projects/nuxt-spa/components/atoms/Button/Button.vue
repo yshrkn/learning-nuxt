@@ -11,8 +11,8 @@ export default {
   },
   computed: {
     tagName() {
-      if(this.to) return 'nuxt-link';
-      if(this.$attrs.href) return 'a';
+      if (this.to) return 'nuxt-link';
+      if (this.$attrs.href) return 'a';
       return 'button';
     }
   }

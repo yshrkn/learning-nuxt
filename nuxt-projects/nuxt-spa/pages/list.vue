@@ -1,15 +1,13 @@
 <template>
-
+  
 </template>
 
 <script>
-import Button from '../components/Button/Button.vue';
 import ProductList from '../components/ProductList/ProductList.vue';
 
 export default {
   components: {
-    Button,
-    ProductList
+
   },
   data() {
     return {
