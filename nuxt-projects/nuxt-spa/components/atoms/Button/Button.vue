@@ -20,5 +20,5 @@ export default {
 </script>
 
 <style lang="scss" module>
-@import '~/components/Button/Button.scss';
+@import './Button.scss';
 </style>

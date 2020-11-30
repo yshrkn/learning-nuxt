@@ -1,37 +1,29 @@
 <template>
+  <div>
 
+    <Accordion :items="items"></Accordion>
+
+
+  </div>
 </template>
 
 <script>
-import Button from '../components/Button/Button.vue';
-import ProductList from '../components/ProductList/ProductList.vue';
+import Button from '../components/atoms/Button/Button.vue';
+import Accordion from '../components/atoms/Accordion/Accordion.vue';
 
 export default {
   components: {
     Button,
-    ProductList
+    Accordion,
   },
   data() {
     return {
-      products: [
-        { id: 1, name: "商品A" },
-        { id: 2, name: "商品B" },
-        { id: 3, name: "商品C" },
+      items: [
+        { id: 1, name: "商品A", text:"テキストテキストテキスト" },
+        { id: 2, name: "商品B", text:"テキストテキストテキスト" },
+        { id: 3, name: "商品C", text:"テキストテキストテキスト" },
       ]
     }
-  },
-  // async asyncData(context) {
-  //   setTimeout(() => {
-
-  //     return {
-  //       products: [
-  //         { id: 1, name: "商品A" },
-  //         { id: 2, name: "商品B" },
-  //         { id: 3, name: "商品C" },
-  //       ]
-  //     }
-
-  //   }, 1000);
-  // },
+  }
 }
 </script>
